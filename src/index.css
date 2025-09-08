@@ -1,20 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-ARCHIVO 5: index.css (dentro de src)
-Click DERECHO sobre la carpeta src
-Click "New File"
-Escribir: index.css
-Presionar Enter
-Copiar y pegar:
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
