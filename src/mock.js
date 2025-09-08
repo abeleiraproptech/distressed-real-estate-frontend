@@ -37,7 +37,7 @@ export const opportunities = [
     description: "Inversión y formación especializada en activos inmobiliarios de procedencia judicial. La primera plataforma especializada en subastas, cesiones de remate y compra de créditos NPL.",
     type: "Plataforma",
     status: "Disponible",
-    image: "https://i.ibb.co/W4R5KHD4/Subastracker.png",
+    image: "https://i.ibb.co/LzbyzN4C/Subastracker.png",
     url: "https://subastracker.com"
   },
   {
@@ -46,7 +46,7 @@ export const opportunities = [
     description: "Comercialización de oportunidades de inversión en activos de procedencia judicial: Cesiones de remate, créditos NPL, activos SAREB, etc. Únete a la lista de correo con las inversiones inmobiliarias más rentables del mercado.",
     type: "Newsletter",
     status: "Disponible",
-    image: "https://i.ibb.co/WNqPXx2d/Dise-o-sin-t-tulo-5.png",
+    image: "https://i.ibb.co/cXRYWKKY/Dise-o-sin-t-tulo-5.png",
     url: "https://invalore.com"
   }
 ];
@@ -84,4 +84,5 @@ export const contactInfo = {
     twitter: "https://x.com/subastracker",
     instagram: "https://www.instagram.com/subastracker/"
   }
+
 };
