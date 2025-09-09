@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Mail, Linkedin, Twitter, Instagram, Globe } from 'lucide-react';
+import { Building, Mail, Linkedin, X, Instagram, Globe } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -42,15 +42,15 @@ const Footer = () => {
                 <Linkedin size={20} />
                 <span className="text-sm">LinkedIn</span>
               </a>
-              <a 
-                href="https://x.com/subastracker"
-                className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Twitter size={20} />
-                <span className="text-sm">Twitter</span>
-              </a>
+<a 
+  href="https://x.com/subastracker"
+  className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <X size={20} />
+  <span className="text-sm">X</span>
+</a>
               <a 
                 href="https://www.instagram.com/subastracker/"
                 className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
@@ -94,5 +94,6 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
