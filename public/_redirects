@@ -1,2 +1,6 @@
+# Force HTTPS and remove www
+http://abeleira.es/* https://abeleira.es/:splat 301!
+http://www.abeleira.es/* https://abeleira.es/:splat 301!
+https://www.abeleira.es/* https://abeleira.es/:splat 301!
 # Redirects for Single Page Application
 /*    /index.html   200
