@@ -12,7 +12,7 @@ const Header = () => {
           {/* Logo y Texto */}
           <div className="flex items-center space-x-3">
             <img 
-              src="https://i.ibb.co/C5PQRBHQ/logo.png"
+              src="/logo.png"
               alt="Distressed Real Estate Consulting Logo" 
               className="w-10 h-10 object-contain"
             />
@@ -63,5 +63,6 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
