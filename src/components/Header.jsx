@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button } from './ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -25,9 +24,6 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <a href="#servicios" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Servicios
-            </a>
-            <a href="#oportunidades" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
-              Webs del Grupo
             </a>
             <a href="#contacto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
               Contacto
