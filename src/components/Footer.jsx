@@ -1,99 +1,64 @@
-import React from 'react';
-import { Building, Mail, Linkedin, X, Instagram, Globe } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Company Info */}
-          <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <Building size={32} className="text-green-500" />
-              <div>
-                <div className="text-2xl font-bold">Distressed <span className="text-green-500">Real Estate</span></div>
-                <div className="text-green-500 font-medium">Consulting</div>
-              </div>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Especialistas en inversiones inmobiliarias de procedencia judicial. Inversión mediante capital propio, consultoría externa para inversores y formación especializada y exclusiva en el sector.
-            </p>
-            
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-300">
-                <Mail size={18} className="text-green-500" />
-                <span>info@abeleira.es</span>
-              </div>
+    <header className="bg-white/90 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-100">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo y Texto */}
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/logo.png"
+              alt="Distressed Real Estate Consulting Logo" 
+              className="w-10 h-10 object-contain"
+            />
+            <div className="text-xl font-bold text-gray-900">
+              Distressed <span className="text-green-600">Real Estate</span> Consulting
             </div>
           </div>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            <a href="#servicios" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Servicios
+            </a>
+            <a href="#contacto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+              Contacto
+            </a>
+          </nav>
 
-          {/* Social Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Síguenos</h4>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              <a 
-                href="https://www.linkedin.com/in/pablonaveira/"
-                className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Linkedin size={20} />
-                <span className="text-sm">LinkedIn</span>
-              </a>
-<a 
-  href="https://x.com/subastracker"
-  className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <X size={20} />
-  <span className="text-sm">X</span>
-</a>
-              <a 
-                href="https://www.instagram.com/subastracker/"
-                className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Instagram size={20} />
-                <span className="text-sm">Instagram</span>
-              </a>
-              <a 
-                href="https://www.subastracker.com/"
-                className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Globe size={20} />
-                <span className="text-sm">Subastracker</span>
-              </a>
-              <a 
-                href="https://www.invalore.com/"
-                className="flex items-center space-x-2 p-2 bg-gray-800 rounded-lg hover:bg-green-600 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Globe size={20} />
-                <span className="text-sm">InvaloRE</span>
-              </a>
-            </div>
-          </div>
+          {/* Mobile Menu Button */}
+          <button 
+            className="lg:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="text-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} ABELEIRA PROPTECH S.L. - B44935229 - Juan Flórez, 8 5º - A Coruña. Todos los derechos reservados.
-            </p>
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden mt-4 py-4 border-t border-gray-100">
+            <nav className="flex flex-col space-y-4">
+              <a href="#servicios" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                Servicios
+              </a>
+              <a href="#oportunidades" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                Webs del Grupo
+              </a>
+              <a href="#contacto" className="text-gray-600 hover:text-green-600 transition-colors font-medium">
+                Contacto
+              </a>
+            </nav>
           </div>
-        </div>
+        )}
       </div>
-    </footer>
+    </header>
   );
 };
 
 
-export default Footer;
+export default Header;
