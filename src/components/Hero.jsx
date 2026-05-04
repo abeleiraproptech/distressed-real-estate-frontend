@@ -57,11 +57,6 @@ const Hero = () => {
                   <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
-              <a href="#oportunidades">
-                <Button variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3">
-                  Webs del Grupo
-                </Button>
-              </a>
             </div>
           </div>
 
